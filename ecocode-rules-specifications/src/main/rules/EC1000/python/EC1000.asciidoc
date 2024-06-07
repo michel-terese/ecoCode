@@ -1,0 +1,19 @@
+Using regex methods for basic string manipulations is not time efficient.
+Prefer the usage of string methods such as startswith, endswith, or in operator, which are faster.
+
+## Noncompliant Code Example
+
+```python
+string = 'abcdef'
+if re.search(r'^abc', string):
+    print('string starts with abc')
+```
+
+## Compliant Solution
+
+```python
+string = 'abcdef'
+if string.startswith('abc'):
+    print('string starts with abc')
+```
+
